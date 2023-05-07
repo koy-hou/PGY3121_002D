@@ -1,0 +1,20 @@
+body{
+    color: rgb(0, 119, 255);
+}
+
+.headerPag{
+    
+    display: flex;
+    background-color: #F98404;
+    justify-content: center;
+}
+
+.navbar{
+    display: grid;
+    justify-self: flex-start;
+    background-color: #F98404;
+}
+
+.navbar a{
+    color: rgb(0, 119, 255);
+}
