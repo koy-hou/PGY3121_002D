@@ -1,14 +1,17 @@
 body{
-    color: rgb(0, 119, 255);
+    color: black;
 }
-
 .headerPag{
     
     display: flex;
     background-color: #F98404;
     justify-content: center;
+    color: rgb(0, 119, 255);
+    
 }
-
+.headerPag h1{
+    font-weight: bold;
+}
 .navbar{
     display: grid;
     justify-self: flex-start;
@@ -17,4 +20,6 @@ body{
 
 .navbar a{
     color: rgb(0, 119, 255);
+    font-weight: 760;
 }
+
