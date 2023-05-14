@@ -1,17 +1,35 @@
-$("#modoOscuro").click(function(){
-    console.log("hola");
-    if ($("input.form-check-input").is(":checked")) {
-        $(".headerPag").css({"background-color":"#151515"})
-        $(".navbar").css({"background-color":"#151515"})
-        $("body").css({"background-color":"#331847"})
-        $("body").css({"color":"antiquewhite"})
-    }else{  
-        $(".headerPag").css({"background-color":"#F98404"})
-        $(".navbar").css({"background-color":"#F98404"})
-        $("body").css({"background-color":"white"})
-        $("body").css({"color":"black"})
-    }
+$(document).ready(function() {
+  var isChecked = localStorage.getItem("modoOscuro");
+
+  if (isChecked === 'true') {
+    $("modoOscuro").prop('checked', true);
+    setDarkMode(true);
+  }
+
+  $('#modoOscuro').click(function() {
+    var isChecked = $(this).is(':checked');
+
+    localStorage.setItem('modoOscuro', isChecked);
+
+    setDarkMode(isChecked);
+  });
 });
+
+function setDarkMode(isDarkMode) {
+  if (isDarkMode) {
+    $(".headerPag").css({"background-color":"#151515"})
+    $(".navbar").css({"background-color":"#151515"})
+    $("body").css({"background-color":"#331847"})
+    $("body").css({"color":"antiquewhite"})
+    $(".tarjetas").css({"background-color":"#151515"});
+  } else {  
+    $(".headerPag").css({"background-color":"#F98404"})
+    $(".navbar").css({"background-color":"#F98404"})
+    $("body").css({"background-color":"white"})
+    $("body").css({"color":"black"})
+    $(".tarjetas").css({"background-color":"transparent"});
+  }
+}
 
 
 $(document).ready(function() {
