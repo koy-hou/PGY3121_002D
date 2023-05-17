@@ -15,7 +15,8 @@
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="modoOscuro">
             </div>
-            <p id="hora"></h1>
+            <p style="font-weight: bold;" id="clima"></p>
+            <p style="font-weight: bold;" id="hora"></p>
         </div>
         
     </header>
@@ -25,21 +26,79 @@
             <a class="navbar-brand" href="index.html" target="_self">
                 <img src="img/icons8-home-48.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 Inicio</a>
+            <a class="navbar-brand" href="fotodeldia.html" target="_self">Foto del Dia</a>
+            <a class="navbar-brand" href="asteroides.html" target="_self">Asteriodes Cercanos a la tierra</a>
             <a class="navbar-brand" href="contacto.html" target="_self">Contactanos</a>
             <a class="navbar-brand" href="quienesomos.html" target="_self">Quienes Somos</a>
             <a class="navbar-brand" href="https://www.nasa.gov/" target="_blank">NASA</a>
-        </div>
-        
+        </div>  
     </nav>
+
     <div class="container">
-        <H1 style="margin-top: 30px;">Foto del dia</H1>
-        <h1 id="apod"></h1>
+        <H1 style="margin-top: 30px; margin-bottom: 16px;">Foto del dia</H1>
+        <p id="apod"></p>
     </div>
+
+    <footer class="container-fluid bg-dark p-5 mt-2">
+        <div class="row">
+            <div class="col-md-4 mb-2">
+                <h4 class="text-light">Mapa del Sitio</h4>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="fotodeldia.html">Foto del Dia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="asteroides.html">Asteriodes Cercanos a la tierra</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contacto.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="quienesomos.html">Quienes Somos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-2">
+                <h4 class="text-light">Sitios que te pueden interesar</h4>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" target="_blank" href="https://www.nasa.gov/">NASA</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center mb-2">
+                <img class="footer-img" src="img/jahad.png" alt="" height="30px" weigth="30px">
+                <p class="d-inline text-light">&copy;Hola</p>
+                <hr>
+                <p class="text-light">Redes de la pagina</p>
+                <div class="card-footer">
+                    <ul class="nav justify-content-center">
+                        <li>
+                            <a href="https://www.instagram.com/quirinus.__/" target="_blank" class="nav-link">
+                                <img class="footer-img" src="img/instagram.svg" alt="" height="50px" weigth="50px">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/koy_hou" target="_blank" class="nav-link">
+                                <img class="footer-img" src="img/twitter.svg" alt="" height="50px" weigth="50px">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </footer>
+
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-    
     <script src="js/funciones.js"></script>
 
 </body>

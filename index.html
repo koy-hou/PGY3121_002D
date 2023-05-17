@@ -15,7 +15,8 @@
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="modoOscuro">
             </div>
-            <p style="font-weight: bold;" id="hora"></h1>
+            <p style="font-weight: bold;" id="clima"></p>
+            <p style="font-weight: bold;" id="hora"></p>
         </div>
         
     </header>
@@ -25,14 +26,63 @@
             <a class="navbar-brand" href="index.html" target="_self">
                 <img src="img/icons8-home-48.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 Inicio</a>
+            <a class="navbar-brand" href="fotodeldia.html" target="_self">Foto del Dia</a>
+            <a class="navbar-brand" href="asteroides.html" target="_self">Asteriodes Cercanos a la tierra</a>
             <a class="navbar-brand" href="contacto.html" target="_self">Contactanos</a>
             <a class="navbar-brand" href="quienesomos.html" target="_self">Quienes Somos</a>
-            <a class="navbar-brand" href="fotodeldia.html" target="_self">Foto del Dia</a>
             <a class="navbar-brand" href="https://www.nasa.gov/" target="_blank">NASA</a>
         </div>
-        
     </nav>
     
+    <div carrusel class="container mt-4 ">
+        <div id="carouselLandingImages" class="carousel slide carousel-fade">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselLandingImages" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselLandingImages" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselLandingImages" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselLandingImages" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselLandingImages" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselLandingImages" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/Carucel/Aurora Boreal.jpg" class="d-block w-100" alt="..." height="700" width="700">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Carucel/hubble-13-ngc-1300-barred-spiral-galaxy-1920.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Carucel/hubble-17-sombrero-galaxy-1920.jpg" class="d-block w-100" alt="..." >
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Carucel/iss069e008558orig.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Carucel/Nebula.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Carucel/6037_msl_banner.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselLandingImages"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselLandingImages"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
     <div class="container">
         <h1 style="margin-top: 30px;">Cosas que pueden ser de tu interes</h1>
     </div>
@@ -43,9 +93,10 @@
               <img src="img/star-eats-planet-16.jpg" class="w-100" alt="..." height="286">
             </div>
             <div class="col-md-6 p-4 ps-md-0 tarjetas">
-              <h5 class="mt-0">Columns with stretched link</h5>
-              <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
-              <a href="#" class="stretched-link">Go somewhere</a>
+              <h5 class="mt-0">Atrapados en el acto: Astrónomos detectan una estrella devorando un planeta.</h5>
+              <p>Los astrónomos han identificado muchas estrellas gigantes rojas que consumen planetas cercanos, pero esta es la primera vez que se ha observado directamente el proceso. La estrella en cuestión está en la fase de gigante roja, al final de su vida, y eventualmente se expandirá a aproximadamente 100 veces su tamaño actual. Durante este proceso, se espera que absorba a Mercurio, Venus y posiblemente la Tierra. El descubrimiento se realizó utilizando observatorios terrestres y la nave espacial NEOWISE de la NASA. El evento observado proporciona información valiosa sobre los procesos finales en la evolución estelar.</p>
+              <p style="font-weight: bold;" class="text-danger">El artículo original se encuentra en inglés</p>
+              <a href="https://www.nasa.gov/feature/jpl/caught-in-the-act-astronomers-detect-a-star-devouring-a-planet" class="stretched-link" target="_blank">Ver el artículo original</a>
             </div>
             <hr class="text warning">
         </div>
@@ -55,20 +106,101 @@
               <img src="img/hubble_ngc5283_v4_mstr_flat_final.jpg" class="w-100" alt="..." height="286">
             </div>
             <div class="col-md-6 p-4 ps-md-0 tarjetas">
-              <h5 class="mt-0">Columns with stretched link</h5>
-              <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
-              <a href="#" class="stretched-link">Go somewhere</a>
+              <h5 class="mt-0">El Hubble observa una hermosa galaxia luminosa.</h5>
+              <p>La galaxia lenticular NGC 5283, captada por el Telescopio Espacial Hubble de la NASA, contiene un núcleo galáctico activo (AGN) donde reside un agujero negro supermasivo. Cuando materiales como polvo y gas caen en el agujero negro, se calientan y emiten luz en distintos espectros. NGC 5283 es una galaxia Seyfert, siendo visibles su estructura y características, a diferencia de otros AGNs que pueden opacar a su galaxia anfitriona. Esta observación de Hubble forma parte de un estudio sobre AGNs cercanos, que proporcionará datos valiosos para investigaciones sobre la física de AGN, agujeros negros y la estructura de las galaxias hospederas.</p>
+              <p style="font-weight: bold;" class="text-danger">El artículo original se encuentra en inglés</p>
+              <a href="https://www.nasa.gov/image-feature/goddard/2023/hubble-views-a-beautiful-luminous-galaxy" class="stretched-link" target="_blank">Ver el artículo original</a>
+            </div>
+            <hr class="text warning">
+        </div>
+
+        <div class="row g-0 bg-body-secondary position-relative">
+            <div class="col-md-6 mb-md-0 p-md-4 tarjetas">
+              <img src="img/1-pia02963-1041.jpg" class="w-100" alt="..." height="286">
+            </div>
+            <div class="col-md-6 p-4 ps-md-0 tarjetas">
+              <h5 class="mt-0">Nuevo estudio de las grandes lunas de Urano muestra que 4 podrían contener agua.</h5>
+              <p>Un nuevo análisis de datos de la misión Voyager de la NASA, junto con modelos informáticos, ha llevado a los científicos a concluir que cuatro de las mayores lunas de Urano podrían contener un océano entre su núcleo y su corteza helada. El estudio detalla la evolución interna de estas lunas y sugiere que los océanos podrían tener una profundidad considerable.</p>
+              <p style="font-weight: bold;" class="text-danger">El artículo original se encuentra en inglés</p>
+              <a href="https://www.nasa.gov/feature/jpl/new-study-of-uranus-large-moons-shows-4-may-hold-water" class="stretched-link" target="_blank">Ver el artículo original</a>
+            </div>
+            <hr class="text warning">
+        </div>
+
+        <div class="row g-0 bg-body-secondary position-relative">
+            <div class="col-md-6 mb-md-0 p-md-4 tarjetas">
+              <img src="img/1-pia25885-1041.jpg" class="w-100" alt="..." height="286">
+            </div>
+            <div class="col-md-6 p-4 ps-md-0 tarjetas">
+              <h5 class="mt-0">La misión Juno de la NASA se acerca cada vez más a la luna de Júpiter, Ío.</h5>
+              <p>La nave espacial Juno de la NASA volará cerca de la luna volcánica de Júpiter, Ío, el martes 16 de mayo, y luego pasará cerca del propio gigante gaseoso. El sobrevuelo de la luna joviana será el más cercano hasta la fecha, a una altitud de aproximadamente 22,060 millas (35,500 kilómetros). En su tercer año de misión extendida para investigar el interior de Júpiter, la nave espacial alimentada por energía solar también explorará el sistema de anillos donde residen algunas de las lunas internas del gigante gaseoso.</p>
+              <p style="font-weight: bold;" class="text-danger">El artículo original se encuentra en inglés</p>
+              <a href="https://www.nasa.gov/feature/jpl/nasa-s-juno-mission-getting-closer-to-jupiter-s-moon-io" class="stretched-link" target="_blank">Ver el artículo original</a>
             </div>
         </div>
 
     </div>
     
+    <footer class="container-fluid bg-dark p-5 mt-2">
+        <div class="row">
+            <div class="col-md-4 mb-2">
+                <h4 class="text-light">Mapa del Sitio</h4>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="fotodeldia.html">Foto del Dia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="asteroides.html">Asteriodes Cercanos a la tierra</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contacto.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="quienesomos.html">Quienes Somos</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-2">
+                <h4 class="text-light">Sitios que te pueden interesar</h4>
+                <hr>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" target="_blank" href="https://www.nasa.gov/">NASA</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center mb-2">
+                <img class="footer-img" src="img/jahad.png" alt="" height="30px" weigth="30px">
+                <p class="d-inline text-light">&copy;Hola</p>
+                <hr>
+                <p class="text-light">Redes de la pagina</p>
+                <div class="card-footer">
+                    <ul class="nav justify-content-center">
+                        <li>
+                            <a href="https://www.instagram.com/quirinus.__/" target="_blank" class="nav-link">
+                                <img class="footer-img" src="img/instagram.svg" alt="" height="50px" weigth="50px">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/koy_hou" target="_blank" class="nav-link">
+                                <img class="footer-img" src="img/twitter.svg" alt="" height="50px" weigth="50px">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </footer>
 
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-    
     <script src="js/funciones.js"></script>
 
 </body>

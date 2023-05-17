@@ -1,3 +1,4 @@
+//Modo oscuro
 $(document).ready(function() {
   var isChecked = localStorage.getItem("modoOscuro");
 
@@ -31,7 +32,7 @@ function setDarkMode(isDarkMode) {
   }
 }
 
-
+//Reloj
 $(document).ready(function() {
     var url = "http://worldtimeapi.org/api/timezone/Europe/Madrid";
   
@@ -49,17 +50,51 @@ $(document).ready(function() {
     setInterval(horaLocal, 1000);
   });
 
+  //Clima
+  const apiKeyClima = '89be60e3ae71b61c91494529716b226d'; // Tu propia clave de API de OpenWeather
+  const city = 'Santiago';
 
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKeyClima}`;
+
+  $(document).ready(function() {
+    obtenerClima();
+  
+    function obtenerClima() {
+      $.getJSON(apiUrl, function(data) {
+        const temperaturaKelvin = data.main.temp;
+        const temperaturaCelsius = temperaturaKelvin - 273.15;
+        const descripcion = data.weather[0].description;
+        const icono = data.weather[0].icon;
+  
+        const iconoUrl = `https://openweathermap.org/img/w/${icono}.png`;
+  
+        $('#clima').html(`
+          <p style="padding-left: 10px;">Temperatura de Santiago de Chile: ${temperaturaCelsius.toFixed(2)} °C <img src="${iconoUrl}" alt="Icono del clima" width="30" height="30"></p>
+          
+        `);
+      })
+      .fail(function(error) {
+        console.log(error);
+      });
+    }
+  });
+
+
+  //Api Nasa 
 
   const apiKey = 'xrvFhOeI5gldaxPQqfTStJDX6DXLZWMONb8aiwTR';
   const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-  
+  const urlNasa = 'https://api.nasa.gov/neo/rest/v1/feed';
+
+  //Foto del dia
   $(document).ready(function() {
     
     $.get(url, function(data) {
       let html = `
         <img src="${data.url}" alt="${data.title}" style="max-width: 100%;">
         <h2>${data.title}</h2>
+        <br>
+        <p style="font-weight: bold;  font-size: 20px;">${data.explanation}</p>
       `;
       
       $('#apod').html(html);
@@ -68,5 +103,31 @@ $(document).ready(function() {
       console.log(error);
     });
   });
-  
-  /*<p>${data.explanation}</p> Agregar esto solo si se puede cambiar al español */
+
+  //Asteroides cercanos
+  const imgPeligro = '<img src="img/peligro.svg" alt="Peligroso" width="30" height="24">';
+  const imgNoPeligro = '<img src="img/nopeligro.svg" alt="No peligroso" width="30" height="24">';
+
+  $(document).ready(function() {
+    $('#fetchData').click(function() {
+      $.get(urlNasa, { api_key: apiKey })
+        .done(function(data) {
+          let formattedData = '';
+          for (const date in data.near_earth_objects) {
+            formattedData += `<p>Fecha: ${date}</p>`;
+            const neoObjects = data.near_earth_objects[date];
+            neoObjects.forEach(function(neo, index) {
+              formattedData += `<p>Asteroid ${index + 1}:</p>`;
+              formattedData += `<p>&nbsp;Nombre: ${neo.name}</p>`;
+              formattedData += `<p>&nbsp;Diámetro: ${neo.estimated_diameter.kilometers.estimated_diameter_max} km</p>`;
+              formattedData += `<p>&nbsp;Peligroso: ${neo.is_potentially_hazardous_asteroid ? `Sí ${imgPeligro}` : `No ${imgNoPeligro}`}</p>`;
+              formattedData += `<hr><br>`
+            });
+          }
+          $('#neoData').html(formattedData);
+        })
+        .fail(function(error) {
+          console.log(error);
+        });
+    });
+  });
